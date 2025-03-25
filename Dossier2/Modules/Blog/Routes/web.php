@@ -4,14 +4,16 @@ use Modules\Blog\Controllers\ProductController;
 use Modules\Blog\Controllers\ProfileController;
 use Modules\Blog\Controllers\RuleController;
 use Illuminate\Support\Facades\Route;
+use Modules\Blog\Controllers\ProduitController;
 
 Route::get('/test-rule', [RuleController::class, 'testRule']);
 
 // Route::get('/products', [ProductController::class, 'index'])->middleware('auth');
 // Route::post('/products', [ProductController::class, 'store'])->name('products.store');
 // Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
-Route::get('/public', [ProductController::class, 'home']);
-Route::resource('/products', ProductController::class);
+// Route::get('/public', [ProductController::class, 'home']);
+// Route::resource('/products', ProductController::class);
+Route::resource('/produit', ProduitController::class);
 
 Route::get('/dashboard', function () {
     return view('Blog::dashboard');

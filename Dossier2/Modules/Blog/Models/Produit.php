@@ -4,11 +4,10 @@ namespace Modules\Blog\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Produit extends Model
 {
-    //
-    protected $table = 'products';
-    protected $fillable = ['title', 'content', 'price', 'stock', 'user_id'];
+    protected $table = "produit";
+    protected $fillable = ['name', 'stock', 'price'];
 
     public function user()
     {
